@@ -1,0 +1,10 @@
+# SCsub
+Import('env')
+
+SConscript("libharu/SCsub")
+
+local_env = env.Clone()
+local_env.Append(CPPPATH=['libharu/include'])
+
+env.add_source_files(env.modules_sources,"*.cpp") # just add all cpp files to the build
+

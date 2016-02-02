@@ -1,0 +1,60 @@
+#+TITLE: Godot Engine PDF Creation Module
+#+AUTHOR: Franco Eusébio Garcia
+
+* Information
+
+This module allows Godot Engine to create PDF files using LibHARU. Its provides
+an API to create PDF documents in the Godot Engine. It also offers bindings for
+using the API in GDScript.
+
+* Example
+
+#+BEGIN_SRC godot-gdscript
+var pdf = PDF.new()
+pdf.create_document("/tmp/DejaVuSans.ttf", "/tmp/DejaVuSerif.ttf")
+
+pdf.add_new_page()
+pdf.add_title("Document Title")
+pdf.add_header("My Header")
+pdf.add_body_text("The quick brown fox jumps over the lazy dog.")
+
+pdf.add_new_page()
+pdf.add_title("Write 10 times...")
+for i in range(10):
+    pdf.add_body_text("The quick brown fox jumps over the lazy dog.")
+
+pdf.save_document("/tmp/my_doc.pdf")
+pdf.finish_document()
+#+END_SRC
+
+* Installation
+
+Clone or extract this project into Godot's ~module~ directory. Then follow the
+instructions to build LibHARU in your platform. It is important that the header
+=libharu/include/hpdf_config.h= exists; otherwise, the compilation will fail.
+
+** Linux (X11)
+
+In a shell, run:
+
+#+BEGIN_SRC sh
+git clone https://github.com/libharu/libharu libharu
+cd libharu
+./buildconf.sh
+# The next step generates the hpdf_config.h file.
+./configure
+#+END_SRC
+
+Then build Godot:
+
+#+BEGIN_SRC sh
+scons platform=x11
+#+END_SRC
+
+* Issues
+
+** TODO Error handler is currently undefined
+
+LibHARU error handler function currently does nothing.
+
+** TODO Forward LibHARU's return codes

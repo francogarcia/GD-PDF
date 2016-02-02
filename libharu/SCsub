@@ -1,0 +1,7 @@
+# SCsub
+Import('env')
+
+local_env = env.Clone()
+
+local_env.Append(CPPPATH=['include'])
+local_env.add_source_files(env.modules_sources,"src/*.c")
