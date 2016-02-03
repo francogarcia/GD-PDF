@@ -100,8 +100,8 @@ scons platform=x11 tools=no target=release bits=64
 scons platform=x11 tools=no target=release_debug bits=64
 #+END_SRC
 
-Afterwards, move the resulting files to =/home/youruser/.godot/templates=, with
-the followig names:
+Afterwards, move the resulting files to =/home/youruser/.godot/templates=
+(=~/.godot/templates=), with the followig names:
 
 - =linux_x11_32_debug=;
 - =linux_x11_32_release=;
@@ -125,7 +125,8 @@ scons platform=windows tools=no target=release_debug bits=64
 #+END_SRC
 
 Afterwards, move the resulting files to
-=C:\USERS\YOURUSER\AppData\Roaming\Godot\Templates=, with the followig names:
+=C:\USERS\YOURUSER\AppData\Roaming\Godot\Templates=
+(=%APPDATA%/Godot/templates=), with the followig names:
 
 - =windows_32_debug.exe=;
 - =windows_32_release.exe=;
