@@ -51,6 +51,29 @@ Then build Godot:
 scons platform=x11
 #+END_SRC
 
+** Windows
+
+First fetch the source code for LibHARU.
+
+#+BEGIN_SRC sh
+git clone https://github.com/libharu/libharu libharu
+cd libharu
+#+END_SRC
+
+Then, to generate the configuration file, use Cmake.
+
+- Source code directory: =path/to/libharu=.
+- Destination directory: =path/to/libharu/win32=.
+
+In the root directory, move =win32/include/hpdf_config.h= to
+=include/hpdf_config.h=.
+
+Then build Godot:
+
+#+BEGIN_SRC sh
+scons platform=windows
+#+END_SRC
+
 * Issues
 
 ** TODO Error handler is currently undefined
