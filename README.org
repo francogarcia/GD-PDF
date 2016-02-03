@@ -74,6 +74,10 @@ Then build Godot:
 scons platform=windows
 #+END_SRC
 
+* Exporting Projects
+
+Compile the export templates using the steps outlined in the wiki.
+
 * Issues
 
 ** TODO Error handler is currently undefined
