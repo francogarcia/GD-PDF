@@ -33,6 +33,10 @@ Clone or extract this project into Godot's ~module~ directory. Then follow the
 instructions to build LibHARU in your platform. It is important that the header
 =libharu/include/hpdf_config.h= exists; otherwise, the compilation will fail.
 
+For all platforms bellow, the steps assumes that LibHARU's source code is in
+this modules' =libharu= directory. To speed Godot's compilation, it is
+recommended to use the option =-j N=, to use =N= cores in the building process.
+
 ** Linux (X11)
 
 In a shell, run:
