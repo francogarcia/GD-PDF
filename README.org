@@ -80,7 +80,57 @@ scons platform=windows
 
 * Exporting Projects
 
-Compile the export templates using the steps outlined in the wiki.
+Compile the export templates using the steps outlined in the wiki. See the
+Compile section and pages in [[http://www.godotengine.org/projects/godot-engine/wiki/][Godot Engine - Documentation - OpenProject]] for more
+information.
+
+** Linux
+
+- 32 bits:
+
+#+BEGIN_SRC sh
+scons platform=x11 tools=no target=release bits=32
+scons platform=x11 tools=no target=release_debug bits=32
+#+END_SRC
+
+- 64 bits:
+
+#+BEGIN_SRC sh
+scons platform=x11 tools=no target=release bits=64
+scons platform=x11 tools=no target=release_debug bits=64
+#+END_SRC
+
+Afterwards, move the resulting files to =/home/youruser/.godot/templates=, with
+the followig names:
+
+- =linux_x11_32_debug=;
+- =linux_x11_32_release=;
+- =linux_x11_64_debug=;
+- =linux_x11_64_release=.
+
+** Windows
+
+- 32 bits:
+
+#+BEGIN_SRC sh
+scons platform=windows tools=no target=release bits=32
+scons platform=windows tools=no target=release_debug bits=32
+#+END_SRC
+
+- 64 bits:
+
+#+BEGIN_SRC sh
+scons platform=windows tools=no target=release bits=64
+scons platform=windows tools=no target=release_debug bits=64
+#+END_SRC
+
+Afterwards, move the resulting files to
+=C:\USERS\YOURUSER\AppData\Roaming\Godot\Templates=, with the followig names:
+
+- =windows_32_debug.exe=;
+- =windows_32_release.exe=;
+- =windows_64_debug.exe=;
+- =windows_64_release.exe=.
 
 * Issues
 
