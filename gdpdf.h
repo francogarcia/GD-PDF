@@ -3,15 +3,15 @@
 #ifndef GD_PDF_H
 #define GD_PDF_H
 
-#include "map.h"
-#include "reference.h"
-#include "ustring.h"
+#include "core/map.h"
+#include "core/reference.h"
+#include "core/ustring.h"
 
 // HARU PDF library.
 #include "libharu/include/hpdf.h"
 
 class PDF : public Reference {
-	OBJ_TYPE(PDF, Reference);
+	GDCLASS(PDF, Reference);
 
 	HPDF_Doc m_PDF;
 
