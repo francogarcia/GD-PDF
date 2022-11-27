@@ -287,8 +287,16 @@ void PDF::create_text(HPDF_Page& page,
 								align,
 								NULL);
 	//assert(status == HPDF_OK);
+
+	// Resets page width if the current height changes.
+	// This avoids making the next line narrower than the previous one.
+	if (currentPageHeight != HPDF_Page_GetCurrentTextPos(page).y) {
+		currentPageWidth = m_PageWidth - m_RightMargin;
+	} else {
+		currentPageWidth = HPDF_Page_GetCurrentTextPos(page).x;
+	}
 	currentPageHeight = HPDF_Page_GetCurrentTextPos(page).y;// + HPDF_Page_GetCurrentFontSize(page);
-	currentPageWidth = HPDF_Page_GetCurrentTextPos(page).x;
+
 	HPDF_Page_EndText(page);
 }
 

@@ -23,13 +23,22 @@ pdf.create_document("/tmp/DejaVuSans.ttf", "/tmp/DejaVuSerif.ttf")
 
 pdf.add_new_page()
 pdf.add_title("Document Title")
-pdf.add_header("My Header")
+# pdf.add_header("My Header")
 pdf.add_body_text("The quick brown fox jumps over the lazy dog.")
+pdf.add_body_text("The quick brown fox jumps over the lazy dog. 0123456789")
+pdf.add_body_text("Short sentence.")
+pdf.add_body_text("Longer sentence...")
+
+pdf.add_header("My Section")
+pdf.add_body_text("Section 1")
+
+pdf.add_header("Another Section")
+pdf.add_body_text("Section 2 with some text.")
 
 pdf.add_new_page()
 pdf.add_title("Write 10 times...")
 for i in range(10):
-    pdf.add_body_text("The quick brown fox jumps over the lazy dog.")
+	pdf.add_body_text(str(i + 1) + " The quick brown fox jumps over the lazy dog.")
 
 pdf.save_document("/tmp/my_doc.pdf")
 pdf.finish_document()
@@ -161,8 +170,6 @@ Afterwards, move the resulting files to
 - =windows_64_release.exe=.
 
 * Issues
-
-** TODO New lines are narrowing the text width
 
 ** TODO Error handler is currently undefined
 
