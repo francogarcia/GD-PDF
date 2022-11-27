@@ -17,15 +17,14 @@ HARU_error_handler(HPDF_STATUS error_no, HPDF_STATUS detail_no, void *user_data)
 
 void PDF::_bind_methods() {
 
-	ObjectTypeDB::bind_method("add_section", &PDF::add_section);
-
-	ObjectTypeDB::bind_method("create_document", &PDF::create_document);
-	ObjectTypeDB::bind_method("add_new_page", &PDF::add_new_page);
-	ObjectTypeDB::bind_method("add_title", &PDF::add_title);
-	ObjectTypeDB::bind_method("add_header", &PDF::add_header);
-	ObjectTypeDB::bind_method("add_body_text", &PDF::add_body_text);
-	ObjectTypeDB::bind_method("save_document", &PDF::save_document);
-	ObjectTypeDB::bind_method("finish_document", &PDF::finish_document);
+	ClassDB::bind_method(D_METHOD("add_section"), &PDF::add_section);
+	ClassDB::bind_method(D_METHOD("create_document"), &PDF::create_document);
+	ClassDB::bind_method(D_METHOD("add_new_page"), &PDF::add_new_page);
+	ClassDB::bind_method(D_METHOD("add_title"), &PDF::add_title);
+	ClassDB::bind_method(D_METHOD("add_header"), &PDF::add_header);
+	ClassDB::bind_method(D_METHOD("add_body_text"), &PDF::add_body_text);
+	ClassDB::bind_method(D_METHOD("save_document"), &PDF::save_document);
+	ClassDB::bind_method(D_METHOD("finish_document"), &PDF::finish_document);
 }
 
 PDF::PDF() {
