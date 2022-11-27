@@ -12,7 +12,7 @@ using the API in GDScript.
 Revisions up to commit [[https://github.com/francogarcia/GD-PDF/commit/183216b1815d5e564c07b0fbf24bc2e073ea2cab][183216b1815d5e564c07b0fbf24bc2e073ea2cab]] work with
 Godot 2.
 
-Revision starting from commit [[https://github.com/francogarcia/GD-PDF/commit/e2d45984026d8b4ed1dcbd86e33e19c9aa82f3d6][e2d45984026d8b4ed1dcbd86e33e19c9aa82f3d6]] work
+Revisions starting from commit [[https://github.com/francogarcia/GD-PDF/commit/e2d45984026d8b4ed1dcbd86e33e19c9aa82f3d6][e2d45984026d8b4ed1dcbd86e33e19c9aa82f3d6]] work
 with Godot 3.5 -- thanks to [[https://github.com/Frodo-tech][Frodo-tech]], who has kindly updated this project.
 
 * Example
@@ -38,8 +38,9 @@ pdf.finish_document()
 * Installation
 
 This project has been originally implemented for Godot 2, which required
-plug-ins to be compiled with the engine.
-As such, support for Godot 3.5 still requires compiling the engine.
+plug-ins to be compiled with the engine. As such, support for Godot 3.5 still
+requires compiling the engine. For more information, refer to the section
+"Compiling" pages in the [[https://docs.godotengine.org/en/stable/development/compiling/index.html][Godot Engine Documentation]].
 
 To fetch the source code:
 
@@ -108,8 +109,7 @@ scons platform=windows
 * Exporting Projects
 
 Compile the export templates using the steps outlined in the wiki. See the
-Compile section and pages in [[http://www.godotengine.org/projects/godot-engine/wiki/][Godot Engine - Documentation - OpenProject]] for more
-information.
+section "Compiling" in the [[https://docs.godotengine.org/en/stable/development/compiling/index.html][Godot Engine Documentation]] for more information.
 
 ** Linux
 
