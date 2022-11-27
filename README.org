@@ -9,11 +9,11 @@ using the API in GDScript.
 
 * Support
 
-Revisions up to commit 183216b1815d5e564c07b0fbf24bc2e073ea2cab work with
+Revisions up to commit [[https://github.com/francogarcia/GD-PDF/commit/183216b1815d5e564c07b0fbf24bc2e073ea2cab][183216b1815d5e564c07b0fbf24bc2e073ea2cab]] work with
 Godot 2.
 
-Revisions starting from commit e2d45984026d8b4ed1dcbd86e33e19c9aa82f3d6 work
-with Godot 3.5 -- thanks to @Frodo-tech, who was kindly updated this project.
+Revision starting from commit [[https://github.com/francogarcia/GD-PDF/commit/e2d45984026d8b4ed1dcbd86e33e19c9aa82f3d6][e2d45984026d8b4ed1dcbd86e33e19c9aa82f3d6]] work
+with Godot 3.5 -- thanks to [[https://github.com/Frodo-tech][Frodo-tech]], who has kindly updated this project.
 
 * Example
 
