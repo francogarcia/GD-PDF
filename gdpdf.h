@@ -3,15 +3,15 @@
 #ifndef GD_PDF_H
 #define GD_PDF_H
 
-#include "core/map.h"
-#include "core/reference.h"
-#include "core/ustring.h"
+#include "core/object/ref_counted.h"
+#include "core/string/ustring.h"
+#include "core/templates/vmap.h"
 
 // HARU PDF library.
 #include "libharu/include/hpdf.h"
 
-class PDF : public Reference {
-	GDCLASS(PDF, Reference);
+class PDF : public RefCounted {
+	GDCLASS(PDF, RefCounted);
 
 	HPDF_Doc m_PDF;
 

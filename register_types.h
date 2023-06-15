@@ -1,4 +1,11 @@
 /* register_types.h */
 
-void register_gdpdf_types();
-void unregister_gdpdf_types();
+#ifndef GDPDF_REGISTER_TYPES_H
+#define GDPDF_REGISTER_TYPES_H
+
+#include "modules/register_module_types.h"
+
+void initialize_gdpdf_module(ModuleInitializationLevel p_level);
+void uninitialize_gdpdf_module(ModuleInitializationLevel p_level);
+
+#endif // GDPDF_REGISTER_TYPES_H
