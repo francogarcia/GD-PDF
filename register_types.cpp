@@ -1,15 +1,24 @@
 /* register_types.cpp */
 
 #include "register_types.h"
-#include "core/class_db.h"
+
+#include "core/object/class_db.h"
 
 #include "gdpdf.h"
 
-void register_gdpdf_types() {
+void initialize_gdpdf_module(ModuleInitializationLevel p_level) {
+	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
+		return;
+	}
 
-        ClassDB::register_class<PDF>();
+	GDREGISTER_CLASS(PDF);
+	// ClassDB::register_class<PDF>();
 }
 
-void unregister_gdpdf_types() {
-   //nothing to do here
+void uninitialize_gdpdf_module(ModuleInitializationLevel p_level) {
+	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
+		return;
+	}
+
+	//nothing to do here
 }
